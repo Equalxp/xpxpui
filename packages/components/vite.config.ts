@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
@@ -9,7 +10,7 @@ export default defineConfig({
     //压缩
     //minify: false,
     rollupOptions: {
-      //忽略打包 vue和.less文件
+      //忽略打包vue和.less文件
       external: ["vue", /\.less/],
       input: ["index.ts"],
       output: [
@@ -67,6 +68,6 @@ export default defineConfig({
           });
         }
       },
-    }
+    },
   ],
 });

@@ -4,8 +4,8 @@ import { pkgPath, componentPath } from "../utils/paths";
 import less from "gulp-less";
 import autoprefixer from "gulp-autoprefixer";
 import run from "../utils/run";
-//删除dist
 
+//删除 xpxpui
 export const removeDist = () => {
   return delPath(`${pkgPath}/xpxpui`);
 };
