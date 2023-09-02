@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:xpxpui": "gulp -f packages/components/script/build/index.ts"
+    "build:xpxpui": "gulp -f packages/components/script/build/index.ts",
+    "publish:xpxpui": "gulp -f packages/components/script/publish/index.ts"
   },
   "keywords": [],
   "author": "",
