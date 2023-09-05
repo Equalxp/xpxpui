@@ -16,8 +16,8 @@ hero:
       text: 开始
       link: /guild/installation
     - theme: alt
-      text: 在 Gitee 上查看
-      link: https://gitee.com/geeksdidi/kittyui
+      text: 在 Github 上查看
+      link: https://github.com/Equalxp/xpxpui
 features:
   - icon: 💡
     title: Vue3组件库

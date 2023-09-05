@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import { resolve } from "path";
 import DefineOptions from "unplugin-vue-define-options/vite";
 export default defineConfig({
   build: {
@@ -11,7 +12,7 @@ export default defineConfig({
     //minify: false,
     rollupOptions: {
       //忽略打包vue和.less文件
-      external: ["vue", /\.less/],
+      external: ["vue", /\.less/, "@xpxpui/utils"],
       input: ["index.ts"],
       output: [
         {
@@ -40,6 +41,7 @@ export default defineConfig({
     },
     lib: {
       entry: "./index.ts",
+      name:'xpxpui'
     },
   },
   plugins: [
@@ -70,4 +72,9 @@ export default defineConfig({
       },
     },
   ],
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+    },
+  }
 });

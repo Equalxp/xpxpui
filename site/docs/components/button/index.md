@@ -119,10 +119,12 @@
 
 <div class="example">
     <div>
-        <xp-button>默认按钮</xp-button>
-        <xp-button size="medium">中等按钮</xp-button>
-        <xp-button size="small">小型按钮</xp-button>
-        <xp-button size="mini">超小按钮</xp-button>
+      <xp-button size="max">超大按钮</xp-button>
+      <xp-button size="big">大型按钮</xp-button>
+      <xp-button>默认按钮</xp-button>
+      <xp-button size="medium">中等按钮</xp-button>
+      <xp-button size="small">小型按钮</xp-button>
+      <xp-button size="mini">超小按钮</xp-button>
     </div>
 </div>
 

@@ -1,0 +1,102 @@
+.xp-radio {
+  cursor: pointer;
+  margin-right: 32px;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  position: relative;
+}
+.xp-radio.is-bordered {
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  padding: 0 14px;
+}
+.xp-radio.is-bordered.is-checked:not(.is-disabled) {
+  color: #36ad6a;
+  border: 1px solid #36ad6a;
+}
+.xp-radio.xp-radio-small {
+  height: 24px;
+}
+.xp-radio.xp-radio-small.is-bordered:not(.is-disabled) {
+  padding: 0 10px;
+}
+.xp-radio.xp-radio-large {
+  height: 40px;
+}
+.xp-radio.xp-radio-large.is-bordered:not(.is-disabled) {
+  padding: 0 18px;
+}
+.xp-radio.is-disabled {
+  cursor: not-allowed;
+  color: #c2c2c2;
+}
+.xp-radio > .xp-radio-input {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  box-shadow: #e0e0e6 0px 0px 0px 1px;
+  border-radius: 100%;
+  position: relative;
+}
+.xp-radio > .xp-radio-input.xp-radio-small {
+  width: 12px;
+  height: 12px;
+}
+.xp-radio > .xp-radio-input.xp-radio-small:before {
+  left: calc(12px / 2 - 6px / 2);
+  top: calc(12px / 2 - 6px / 2);
+  width: 6px;
+  height: 6px;
+}
+.xp-radio > .xp-radio-input.xp-radio-large {
+  width: 16px;
+  height: 16px;
+}
+.xp-radio > .xp-radio-input.xp-radio-large:before {
+  left: calc(16px / 2 - 10px / 2);
+  top: calc(16px / 2 - 10px / 2);
+  width: 10px;
+  height: 10px;
+}
+.xp-radio > .xp-radio-input.is-checked {
+  box-shadow: #36ad6a 0px 0px 0px 1px;
+}
+.xp-radio > .xp-radio-input.is-checked:before {
+  opacity: 1;
+  transform: scale(1);
+}
+.xp-radio > .xp-radio-input:before {
+  content: " ";
+  opacity: 0;
+  position: absolute;
+  left: calc(14px / 2 - 8px / 2);
+  top: calc(14px / 2 - 8px / 2);
+  width: 8px;
+  height: 8px;
+  background-color: #36ad6a;
+  border-radius: 50%;
+  transform: scale(0.8);
+  transition: opacity 300ms ease-in-out, background-color 300ms ease-in-out, transform 300ms ease-in-out;
+}
+.xp-radio > .xp-radio-input.is-disabled {
+  background-color: #fafafc;
+  box-shadow: #e0e0e6 0px 0px 0px 1px;
+}
+.xp-radio > .xp-radio-input.is-disabled:before {
+  background-color: #c0c4cc;
+}
+.xp-radio > .xp-radio-input:not(.is-disabled):hover {
+  box-shadow: #36ad6a 0px 0px 0px 1px;
+}
+.xp-radio > .xp-radio-label {
+  padding-left: 8px;
+  user-select: none;
+  font-size: 14px;
+}
+.xp-radio > .xp-radio-label.xp-radio-large {
+  font-size: 16px;
+}
+.xp-radio > .xp-radio-label.xp-radio-small {
+  font-size: 12px;
+}

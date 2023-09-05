@@ -5,10 +5,10 @@ import less from "gulp-less";
 import autoprefixer from "gulp-autoprefixer";
 import run from "../utils/run";
 
-//删除 xpxpui
-export const removeDist = () => {
-  return delPath(`${pkgPath}/xpxpui`);
-};
+// // 删除 xpxpui
+// export const removeDist = () => {
+//   return delPath(`${pkgPath}/xpxpui`);
+// };
 
 //打包样式
 export const buildStyle = () => {
@@ -24,7 +24,7 @@ export const buildComponent = async () => {
   run("pnpm run build", componentPath);
 };
 export default series(
-  async () => removeDist(),
+  // async () => removeDist(),
   parallel(
     async () => buildStyle(),
     async () => buildComponent()

@@ -1,0 +1,21 @@
+.xp-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+
+  &:not(.xp-ellipsis-line-clamp) {
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+  }
+
+  &.xp-ellipsis-line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+  }
+
+  &.xp-ellipsis-expand-trigger {
+    cursor: pointer;
+  }
+}

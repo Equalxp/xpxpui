@@ -1,5 +1,8 @@
 import DefaultTheme from "vitepress/theme";
-import xpxpui from "xpxpui";
+import './style/vitepress.less'
+
+import xpxpui from 'xpxpui'
+
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }) => {

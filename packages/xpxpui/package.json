@@ -24,5 +24,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Equalxp/xpxpui"
+  },
+  "dependencies": {
+    "@xpxpui/utils": "workspace:^"
   }
 }

@@ -1,0 +1,74 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.xp-alert {
+  width: 100%;
+  line-height: 1.6;
+  padding: 8px 16px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  align-items:flex-start;
+  transition: opacity 0.2s;
+
+  &.show-close {
+    padding-right: 32px;
+  }
+  &.is-center {
+    justify-content: center;
+  }
+  .xp-alert-close-icon {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    cursor: pointer;
+  }
+  .xp-alert-icon {
+    margin-right: 10px;
+    height: 100%;
+    display: flex;
+  }
+  .xp-alert-body {
+    .xp-alert-body-title {
+      // 过渡效果的属性 时间 过渡函数速度效果曲线 开始延迟时间
+      transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      color: rgb(31, 34, 37);
+    }
+    .xp-alert-body-content {
+      transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-top: 9px;
+      font-size: 14px;
+      color: rgb(51, 54, 57);
+    }
+  }
+  &.xp-alert-default {
+    background-color: #fafafc;
+    border: 1px solid #efeff4;
+  }
+  &.xp-alert-info {
+    background-color: #eef5fd;
+    border: 1px solid #ccdef8;
+  }
+  &.xp-alert-success {
+    background-color: #eff7f2;
+    border: 1px solid #cce6d6;
+  }
+  &.xp-alert-warning {
+    background-color: #fdf7ee;
+    border: 1px solid #f6e1ba;
+  }
+  &.xp-alert-error {
+    background-color: #f9eef1;
+    border: 1px solid #edccd3;
+  }
+}

@@ -1,0 +1,87 @@
+.xp-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  height: 32px;
+}
+.xp-checkbox.is-disabled {
+  cursor: not-allowed;
+}
+.xp-checkbox.xp-checkbox-large {
+  height: 40px;
+}
+.xp-checkbox.xp-checkbox-small {
+  height: 24px;
+}
+.xp-checkbox:not(.is-disabled):hover .xp-checkbox-input {
+  border: 1px solid #4b9e5f;
+}
+.xp-checkbox:not(.is-disabled):focus .xp-checkbox-input {
+  box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+  border: 1px solid #4b9e5f;
+}
+.xp-checkbox.is-border {
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+.xp-checkbox.is-border.is-checked:not(.is-disabled),
+.xp-checkbox.is-border.is-indeterminate:not(.is-disabled) {
+  color: #4b9e5f;
+  border: 1px solid #18a058;
+}
+.xp-checkbox.is-border.xp-checkbox-large {
+  padding: 0 12px;
+}
+.xp-checkbox.is-border.xp-checkbox-small {
+  padding: 0 8px;
+}
+.xp-checkbox > .xp-checkbox-input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #e0e0e6;
+}
+.xp-checkbox > .xp-checkbox-input.is-checked {
+  background-color: #4b9e5f;
+  box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+  border: 1px solid #18a058;
+  transition: all 0.3s ease-in-out;
+}
+.xp-checkbox > .xp-checkbox-input.xp-checkbox-large {
+  width: 16px;
+  height: 16px;
+}
+.xp-checkbox > .xp-checkbox-input.xp-checkbox-small {
+  width: 12px;
+  height: 12px;
+}
+.xp-checkbox > .xp-checkbox-input.is-disabled {
+  border: 1px solid #e0e0e6;
+  box-shadow: none;
+  background: #fafafc;
+}
+.xp-checkbox > .xp-checkbox-input.is-indeterminate {
+  background-color: #4b9e5f;
+  border: 1px solid #18a058;
+  box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+}
+.xp-checkbox > .xp-checkbox-label {
+  padding: 0 10px;
+  user-select: none;
+  color: #333639;
+  font-size: 14px;
+}
+.xp-checkbox > .xp-checkbox-label.xp-checkbox-large {
+  font-size: 16px;
+}
+.xp-checkbox > .xp-checkbox-label.xp-checkbox-small {
+  font-size: 12px;
+}
+.xp-checkbox > .xp-checkbox-label.is-disabled {
+  color: #c2c2c2ff;
+}

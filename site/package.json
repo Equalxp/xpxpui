@@ -12,10 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "highlight.js": "^11.8.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "vite-svg-loader": "^4.0.0",
     "vitepress": "1.0.0-rc.10",
     "vue": "^3.2.36"
   },
   "dependencies": {
+    "unplugin-vue-setup-extend-plus": "^1.0.0",
     "xpxpui": "workspace:^"
   }
 }

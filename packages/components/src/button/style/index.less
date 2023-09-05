@@ -1,292 +1,313 @@
-@import '../../../common/index.less';
 
-.@{prefix}-button {
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
-  background: #fff;
-  border: 1px solid #dcdfe6;
-  color: #606266;
-  -webkit-appearance: none;
-  text-align: center;
+@h-default: 40px;
+@h-small: 32px;
+@h-large: 48px;
+@white: #fff;
+@default-color: #333;
+@primary-color: #36ad6a;
+@info-color: #4098fc;
+@success-color: #85ce61;
+@warning-color: #f0a020;
+@error-color: #d03050;
+@grey: grey;
+
+@default-border-color: #d9d9d9;
+
+@radius: 3px;
+@green: #18a058;
+
+.xp-button {
+  // button 按钮共有的属性
   box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  transition: 0.1s;
-  font-weight: 500;
-  padding: 12px 20px;
+  height: @h-default;
   font-size: 14px;
-  border-radius: 4px;
-
-  .@{prefix}-button-text {
-    display: inline-block;
-    margin: 0 4px;
-  }
-
-  &:hover {
-    color: #409eff;
-    border-color: #c6e2ff;
-    background-color: #ecf5ff;
-  }
-}
-
-.@{prefix}-button.is-disabled {
-  color: #c0c4cc;
-  cursor: not-allowed;
-  background-image: none;
   background-color: #fff;
-  border-color: #ebeef5;
-}
+  padding: 12px 20px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: @radius;
+  box-shadow: 0 1px 0 fade-out(black, 0.95);
+  transition: all 250ms;
+  color: @default-color;
+  border: 1px solid @default-border-color;
+  user-select: none;
 
-.@{prefix}-button--primary {
-  color: #fff;
-  background-color: #colors[primary];
-  border-color: #409eff;
+  &:focus {
+    outline: none;
+  }
 
-  &:hover {
-    background: #66b1ff;
-    border-color: #66b1ff;
-    color: #fff;
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  // 圆+大中小
+  &.is-circle.xp-button-default {
+    border-radius: 100%;
+    height: @h-default;
+    width: @h-default;
+  }
+  &.is-circle.xp-button-small {
+    border-radius: 100%;
+    height: @h-small;
+    width: @h-small;
+  }
+  &.is-circle.xp-button-large {
+    border-radius: 100%;
+    height: @h-large;
+    width: @h-large;
+  }
+  // 圆角+大中小
+  &.is-round.xp-button-default {
+    border-radius: calc(@h-default / 2);
+  }
+  &.is-round.xp-button-large {
+    border-radius: calc(@h-large / 2);
+  }
+  &.is-round.xp-button-small {
+    border-radius: calc(@h-small / 2);
+  }
+
+  // hover + active + dashed + disabled
+  &.xp-theme-default {
+    &:hover {
+      color: @green;
+      border-color: @green;
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: @green @green @green transparent;
+      }
+    }
+    &:active {
+      // 选中点击 加深颜色
+      color: darken(@green, 20%);
+      border-color: darken(@green, 20%);
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: darken(@green, 20%) darken(@green, 20%)
+          darken(@green, 20%) transparent;
+      }
+    }
+    &.is-dashed {
+      border-style: dashed;
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+      &:hover {
+        color: #333;
+        border-color: #d9d9d9;
+      }
+    }
+    > .xp-loadingIndicator {
+      border-style: dashed;
+      border-color: @default-color @default-color @default-color transparent;
+    }
+  }
+  &.xp-theme-primary {
+    background-color: @primary-color;
+    border-color: @primary-color;
+    color: @white;
+
+    &:hover {
+      // 悬浮变浅
+      background: lighten(@primary-color, 20%);
+      border-color: lighten(@primary-color, 20%);
+    }
+    &:active {
+      // 选中变深 
+      background-color: darken(@primary-color, 20%);
+      border-color: darken(@primary-color, 20%);
+    }
+    // 禁用
+    &.is-disabled {
+      cursor: not-allowed;
+      background: lighten(@primary-color, 20%);
+      border-color: lighten(@primary-color, 20%);
+      &:hover {
+        background: lighten(@primary-color, 20%);
+        border-color: lighten(@primary-color, 20%);
+      }
+    }
+    &.is-dashed {
+      border-style: dashed;
+      background-color: @white !important;
+      color: @primary-color;
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: @primary-color @primary-color @primary-color transparent;
+      }
+    }
+  }
+  &.xp-theme-info {
+    background-color: @info-color;
+    border-color: @info-color;
+    color: @white;
+    &:hover {
+      background: lighten(@info-color, 20%);
+      border-color: lighten(@info-color, 20%);
+    }
+    &:active {
+      background-color: darken(@info-color, 20%);
+      border-color: darken(@info-color, 20%);
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+      background: lighten(@info-color, 20%);
+      border-color: lighten(@info-color, 20%);
+      &:hover {
+        background: lighten(@info-color, 20%);
+        border-color: lighten(@info-color, 20%);
+      }
+    }
+    &.is-dashed {
+      border-style: dashed;
+      background-color: @white !important;
+      color: @info-color;
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: @info-color @info-color @info-color transparent;
+      }
+    }
+  }
+  &.xp-theme-success {
+    background-color: @success-color;
+    border-color: @success-color;
+    color: @white;
+    &:hover {
+      background: lighten(@success-color, 20%);
+      border-color: lighten(@success-color, 20%);
+    }
+    &:active {
+      background-color: darken(@success-color, 20%);
+      border-color: darken(@success-color, 20%);
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+      background: lighten(@success-color, 20%);
+      border-color: lighten(@success-color, 20%);
+      &:hover {
+        background: lighten(@success-color, 20%);
+        border-color: lighten(@success-color, 20%);
+      }
+    }
+    &.is-dashed {
+      border-style: dashed;
+      background-color: @white !important;
+      color: @success-color;
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: @success-color @success-color @success-color transparent;
+      }
+    }
+  }
+  &.xp-theme-warning {
+    background-color: @warning-color;
+    border-color: @warning-color;
+    color: @white;
+    &:hover {
+      background: lighten(@warning-color, 20%);
+      border-color: lighten(@warning-color, 20%);
+    }
+    &:active {
+      background-color: darken(@warning-color, 20%);
+      border-color: darken(@warning-color, 20%);
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+      background: lighten(@warning-color, 20%);
+      border-color: lighten(@warning-color, 20%);
+      &:hover {
+        background: lighten(@warning-color, 20%);
+        border-color: lighten(@warning-color, 20%);
+      }
+    }
+    &.is-dashed {
+      border-style: dashed;
+      background-color: @white !important;
+      color: @warning-color;
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: @warning-color @warning-color @warning-color transparent;
+      }
+    }
+  }
+  &.xp-theme-error {
+    background-color: @error-color;
+    border-color: @error-color;
+    color: @white;
+    &:hover {
+      background: lighten(@error-color, 20%);
+      border-color: lighten(@error-color, 20%);
+    }
+    &:active {
+      background-color: darken(@error-color, 20%);
+      border-color: darken(@error-color, 20%);
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+      background: lighten(@error-color, 20%);
+      border-color: lighten(@error-color, 20%);
+      &:hover {
+        background: lighten(@error-color, 20%);
+        border-color: lighten(@error-color, 20%);
+      }
+    }
+    &.is-dashed {
+      border-style: dashed;
+      background-color: @white !important;
+      color: @error-color;
+
+      > .xp-loadingIndicator {
+        border-style: dashed;
+        border-color: @error-color @error-color @error-color transparent;
+      }
+    }
+  }
+
+  // 大 小
+  &.xp-button-large {
+    font-size: 24px;
+    height: @h-large;
+    padding: 0 16px;
+  }
+  &.xp-button-small {
+    font-size: 12px;
+    height: @h-small;
+    padding: 0 8px;
+  }
+  // 正在加载 loading
+  > .xp-loadingIndicator {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: @white @white @white transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: xp-spin 1s infinite linear;
+  }
+  > .slot-icon-left {
+    margin-right: 5px;
+  }
+  > .slot-icon-right {
+    margin-left: 5px;
   }
 }
 
-.@{prefix}-button--primary.is-plain {
-  color: #409eff;
-  background: #ecf5ff;
-  border-color: #b3d8ff;
-
-  &:hover {
-    color: #fff;
-    background-color: #409eff;
-    border-color: #409eff;
+@keyframes xp-spin {
+  0% {
+    transform: rotate(0deg);
   }
-}
-
-.@{prefix}-button--primary.is-disabled,
-.@{prefix}-button--primary.is-disabled:active,
-.@{prefix}-button--primary.is-disabled:focus,
-.@{prefix}-button--primary.is-disabled:hover {
-  color: #fff;
-  background-color: #a0cfff;
-  border-color: #a0cfff;
-}
-
-//朴素按钮禁用
-.@{prefix}-button--primary.is-disabled.is-plain,
-.@{prefix}-button--primary.is-disabled.is-plain:active,
-.@{prefix}-button--primary.is-disabled.is-plain:focus,
-.@{prefix}-button--primary.is-disabled.is-plain:hover {
-  color: #8cc5ff;
-  background-color: #ecf5ff;
-  border-color: #d9ecff;
-}
-
-.@{prefix}-button--text {
-  border-color: transparent;
-  color: #409eff;
-  background: transparent;
-  padding-left: 0;
-  padding-right: 0;
-
-  &:hover {
-    color: #66b1ff;
-    border-color: transparent;
-    background-color: transparent;
+  100% {
+    transform: rotate(360deg);
   }
-}
-
-.@{prefix}-button--success {
-  color: #fff;
-  background-color: #67c23a;
-  border-color: #67c23a;
-
-  &:hover {
-    background: #85ce61;
-    border-color: #85ce61;
-    color: #fff;
-  }
-}
-
-.@{prefix}-button--success.is-plain {
-  color: #67c23a;
-  background: #f0f9eb;
-  border-color: #c2e7b0;
-
-  &:hover {
-    color: #fff;
-    background-color: #67c23a;
-    border-color: #67c23a;
-  }
-}
-
-.@{prefix}-button--success.is-disabled,
-.@{prefix}-button--success.is-disabled:active,
-.@{prefix}-button--success.is-disabled:focus,
-.@{prefix}-button--success.is-disabled:hover {
-  color: #fff;
-  background-color: #b3e19d;
-  border-color: #b3e19d;
-}
-
-//朴素按钮禁用
-.@{prefix}-button--success.is-disabled.is-plain,
-.@{prefix}-button--success.is-disabled.is-plain:active,
-.@{prefix}-button--success.is-disabled.is-plain:focus,
-.@{prefix}-button--success.is-disabled.is-plain:hover {
-  color: #a4da89;
-  background-color: #f0f9eb;
-  border-color: #e1f3d8;
-}
-
-.@{prefix}-button--info {
-  color: #fff;
-  background-color: #909399;
-  border-color: #909399;
-
-  &:hover {
-    background: #a6a9ad;
-    border-color: #a6a9ad;
-    color: #fff;
-  }
-}
-
-.@{prefix}-button--info.is-plain {
-  color: #909399;
-  background-color: #f4f4f5;
-  border-color: #d3d4d6;
-
-  &:hover {
-    color: #fff;
-    background-color: #909399;
-    border-color: #909399;
-  }
-}
-
-.@{prefix}-button--info.is-disabled,
-.@{prefix}-button--info.is-disabled:active,
-.@{prefix}-button--info.is-disabled:focus,
-.@{prefix}-button--info.is-disabled:hover {
-  color: #fff;
-  background-color: #c8c9cc;
-  border-color: #c8c9cc;
-  cursor: not-allowed;
-}
-
-//朴素按钮禁用
-.@{prefix}-button--info.is-disabled.is-plain,
-.@{prefix}-button--info.is-disabled.is-plain:active,
-.@{prefix}-button--info.is-disabled.is-plain:focus,
-.@{prefix}-button--info.is-disabled.is-plain:hover {
-  color: #bcbec2;
-  background-color: #f4f4f5;
-  border-color: #e9e9eb;
-}
-
-.@{prefix}-button--warning {
-  color: #fff;
-  background-color: #e6a23c;
-  border-color: #e6a23c;
-
-  &:hover {
-    background: #ebb563;
-    border-color: #ebb563;
-    color: #fff;
-  }
-}
-
-.@{prefix}-button--warning.is-plain {
-  color: #e6a23c;
-  background: #ecf5ff;
-  border-color: #b3d8ff;
-
-  &:hover {
-    color: #fff;
-    background-color: #e6a23c;
-    border-color: #e6a23c;
-  }
-}
-
-.@{prefix}-button--warning.is-disabled,
-.@{prefix}-button--warning.is-disabled:active,
-.@{prefix}-button--warning.is-disabled:focus,
-.@{prefix}-button--warning.is-disabled:hover {
-  color: #fff;
-  background-color: #f3d19e;
-  border-color: #f3d19e;
-}
-
-//朴素按钮禁用
-.@{prefix}-button--warning.is-disabled.is-plain,
-.@{prefix}-button--warning.is-disabled.is-plain:active,
-.@{prefix}-button--warning.is-disabled.is-plain:focus,
-.@{prefix}-button--warning.is-disabled.is-plain:hover {
-  color: #f0c78a;
-  background-color: #fdf6ec;
-  border-color: #faecd8;
-}
-
-.@{prefix}-button--danger {
-  color: #fff;
-  background-color: #f56c6c;
-  border-color: #f56c6c;
-
-  &:hover {
-    background: #f78989;
-    border-color: #f78989;
-    color: #fff;
-  }
-}
-
-.@{prefix}-button--warning.is-plain {
-  color: #f56c6c;
-  background: #fef0f0;
-  border-color: #fbc4c4;
-
-  &:hover {
-    color: #fff;
-    background-color: #f56c6c;
-    border-color: #f56c6c;
-  }
-}
-
-.@{prefix}-button--danger.is-disabled,
-.@{prefix}-button--danger.is-disabled:active,
-.@{prefix}-button--danger.is-disabled:focus,
-.@{prefix}-button--danger.is-disabled:hover {
-  color: #fff;
-  background-color: #fab6b6;
-  border-color: #fab6b6;
-}
-
-.@{prefix}-button--danger.is-disabled.is-plain,
-.@{prefix}-button--danger.is-disabled.is-plain:active,
-.@{prefix}-button--danger.is-disabled.is-plain:focus,
-.@{prefix}-button--danger.is-disabled.is-plain:hover {
-  color: #f9a7a7;
-  background-color: #fef0f0;
-  border-color: #fde2e2;
-}
-
-.is-round {
-  border-radius: 20px;
-}
-
-// size
-.@{prefix}-button--medium {
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.@{prefix}-button--small {
-  padding: 9px 15px;
-  font-size: 12px;
-  border-radius: 3px;
-}
-
-.@{prefix}-button--mini {
-  padding: 7px 15px;
-  font-size: 12px;
-  border-radius: 3px;
 }

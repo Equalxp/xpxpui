@@ -1,0 +1,143 @@
+.xp-select {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.xp-select .xp-select-placeholder {
+  color: #c2c2c2;
+}
+.xp-select .xp-select-label,
+.xp-select .xp-select-placeholder {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.xp-select .xp-base-select {
+  width: 100%;
+  line-height: 34px;
+  min-height: 34px;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  outline: none;
+  padding: 0 30px 0 15px;
+  color: #333639;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+}
+.xp-select .xp-base-select:hover {
+  border-color: #c0c4cc;
+}
+.xp-select .xp-base-select:active,
+.xp-select .xp-base-select:focus {
+  outline: none;
+  border-color: #18a058;
+  box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+}
+.xp-select .xp-base-select .xp-select-suffix {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.xp-select .xp-select-dropdown {
+  z-index: 1000;
+  position: absolute;
+  border-radius: 3px;
+  padding: 0;
+  top: calc(100% + 5px);
+  opacity: 0;
+  height: 0px;
+  width: 100%;
+  background-color: #fff;
+  transition: all 250ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px -4px, rgba(0, 0, 0, 0.08) 0px 6px 16px 0px, rgba(0, 0, 0, 0.05) 0px 9px 28px 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.xp-select .xp-select-dropdown .no-options {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.xp-select .xp-select-dropdown .xp-select-option {
+  z-index: 1000;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 32px;
+  padding: 0 10px;
+  line-height: 32px;
+  overflow: visible;
+  background-color: #fff;
+  position: relative;
+}
+.xp-select .xp-select-dropdown .xp-select-option .xp-select-option-suffix-icon {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  right: 0;
+  top: 0;
+}
+.xp-select .xp-select-dropdown .xp-select-option:hover,
+.xp-select .xp-select-dropdown .xp-select-option.is-active {
+  background-color: #f3f3f5;
+  color: #25a561;
+}
+.xp-select .xp-select-dropdown .xp-select-option.is-disabled {
+  cursor: not-allowed;
+  background-color: #fff;
+  color: #c2cddd;
+}
+.xp-select .xp-select-dropdown .xp-select-option.is-disabled.is-active {
+  background-color: #f9f9fa;
+  color: #a5ceaf;
+}
+.xp-select .xp-select-dropdown .xp-select-option.is-multiple {
+  padding-right: 30px;
+}
+.xp-select:hover .xp-select-dropdown {
+  pointer-events: auto;
+}
+.xp-select:focus-within .xp-select-dropdown {
+  opacity: 1;
+  height: 300px;
+  width: 100%;
+  pointer-events: auto;
+}
+.xp-select:focus-within .xp-base-select {
+  outline: none;
+  border-color: #18a058;
+  box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+}
+.xp-select.is-disabled {
+  cursor: not-allowed;
+}
+.xp-select.is-disabled .xp-base-select {
+  cursor: not-allowed;
+  background-color: #fafafc;
+  color: #c2c2c2;
+}
+.xp-select.is-disabled .xp-base-select:hover,
+.xp-select.is-disabled .xp-base-select:focus,
+.xp-select.is-disabled .xp-base-select:active {
+  border: 1px solid #dcdfe6;
+  box-shadow: none;
+}

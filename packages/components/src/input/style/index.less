@@ -1,0 +1,148 @@
+@active-color: #18a058;
+// @active-color: #060607
+
+.xp-input {
+  // input框外的div盒子
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+
+  &.xp-input-prefix .xp-input-inner {
+    padding-left: 30px;
+  }
+
+  &.xp-input-suffix .xp-input-inner {
+    padding-right: 30px;
+  }
+
+  // input框的样式
+  &-inner {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    outline: none;
+    padding: 0 15px;
+    color: rgb(51, 54, 57);
+    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover {
+      border-color: #c0c4cc;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      border-color: @active-color;
+      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+    }
+    &::placeholder {
+      color: rgb(213, 215, 220);
+      font-size: inherit;
+    }
+  }
+
+  // 禁用
+  &.is-disabled {
+    .xp-input-inner {
+      cursor: not-allowed;
+      background-color: #fafafc;
+      color: rgba(194, 194, 194, 1);
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid #dcdfe6;
+        box-shadow: none;
+      }
+    }
+  }
+  // icons居中显示 icon外的span
+  .xp-input-suffix-icon,
+  .xp-input-prefix-icon {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // 后缀
+  .xp-input-suffix-icon {
+    right: 5px;
+  }
+  // 前缀
+  .xp-input-prefix-icon {
+    left: 5px;
+  }
+
+  // 清空按钮 X
+  .close-icon,
+  .password-icon {
+    display: none;
+  }
+  // hover/focus在input框上 &->.xp-input
+  &:hover .close-icon,
+  &:focus .close-icon,
+  &:hover .password-icon,
+  &:focus .password-icon,
+  .suffix-icon {
+    margin: 0 1px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .xp-icon {
+      color: #dcdfe6;
+      // hover在icon上
+      &:hover {
+        color: #c0c4cc;
+      }
+    }
+  }
+  .suffix-icon .xp-icon:hover {
+    color: #dcdfe6;
+  }
+}
+
+.xp-textarea {
+  width: 100%;
+  .xp-textarea-inner {
+    display: block;
+    resize: vertical;
+    padding: 5px 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    color: #606266;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover {
+      border-color: #c0c4cc;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      border-color: @active-color;
+      box-shadow: 0 0 0 2px rgba(24, 160, 88, 0.3);
+    }
+
+    &::placeholder {
+      color: rgb(213, 215, 220);
+      font-size: inherit;
+    }
+  }
+}
