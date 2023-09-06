@@ -7,6 +7,7 @@ export const sidebar = {
       link: '/guild/',
       items: [
         { text: '指南', link: '/guild/installation' },
+        { text: '安装', link: '/guild/install' },
         { text: '快速上手', link: '/guild/quickstart' }
       ]
     }

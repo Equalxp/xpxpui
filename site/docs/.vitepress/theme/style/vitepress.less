@@ -78,14 +78,21 @@
   }
 }
 
+.link[data-v-28007025] {
+  margin: 0;
+  padding: 3px 18px;
+  transition: .4s;
+  padding-left: 14px !important;
+}
+
 .custom-block.details summary {
   color: #36AD6A;
 }
 
 .custom-block.tip {
-  border-color:#9BD9BE ;
+  border-color: #9BD9BE;
   color: #557c69;
-  background-color:#F5FBF9;
+  background-color: #F5FBF9;
 }
 
 // 表格
@@ -110,8 +117,14 @@
     font-size: 15px;
     border: none;
   }
+
   tr {
     border-top: 1px solid #a8a8a8;
     transition: background-color 0.5s;
   }
+}
+
+.vp-doc :not(pre, h1, h2, h3, h4, h5, h6)>code {
+  font-size: var(--vp-code-font-size);
+  color: #6dae82;
 }

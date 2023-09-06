@@ -1,26 +1,8 @@
-# 安装
+# XpxpUI
 
-## 环境支持
+XpxpUI 是一个 Vue3 的组件库。非常开心的用我的名字为其命名!
 
-由于 Vue 3 不再支持 IE11，KittyUI 也不再支持 IE11 浏览器。
+# 介绍
+采用最新的 `Vite4+TypeScript` 为技术栈,支持`按需加载`,`单元测试`,`自动打包与发布`等功能
 
-## 版本
-
-开发中
-
-## 使用包管理器
-
-建议您使用包管理器 (NPM, Yarn, pnpm) 安装 KittyUI, 然后您就可以使用打包工具，例如 Vite 和 webpack
-
-```
-# 选择一个你喜欢的包管理器
-
-# NPM
-$ npm install kitty-ui --save
-
-# Yarn
-$ yarn add kitty-ui
-
-# pnpm
-$ pnpm install kitty-ui
-```
+目前还是`不建议`将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的

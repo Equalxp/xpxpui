@@ -12,11 +12,11 @@
     </span>
     <!-- 有separatorIcon就用icon 没有就用/ -->
     <xp-icon
-      v-if="parent?.separatorIcon"
+      v-if="parent.separatorIcon"
       class="xp-breadcrumb-separator"
       :size="12"
     >
-      <component :is="parent?.separatorIcon" />
+      <component :is="parent.separatorIcon" />
     </xp-icon>
     <span v-else class="xp-breadcrumb-separator">
       {{ parent.separator }}
