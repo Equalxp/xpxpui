@@ -1,0 +1,4 @@
+**.d.ts
+/packages/xpxpui
+dist
+node_modules

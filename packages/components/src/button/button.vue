@@ -14,61 +14,61 @@
   </button>
 </template>
 <script setup lang="ts">
-import { computed, useSlots } from "vue";
-import './style/index.less'
+import { computed, useSlots } from 'vue';
+import './style/index.less';
 const props = defineProps({
   // props传的值进行类型限定和默认值的设置
   theme: {
     type: String,
-    default: "default",
+    default: 'default'
   },
   dashed: {
     type: Boolean,
-    default: false,
+    default: false
   },
   size: {
     type: String,
-    default: "default",
+    default: 'default'
   },
   round: {
     type: Boolean,
-    default: false,
+    default: false
   },
   circle: {
     type: Boolean,
-    default: false,
+    default: false
   },
   disabled: {
     type: Boolean,
-    default: false,
+    default: false
   },
   loading: {
     type: Boolean,
-    default: false,
+    default: false
   },
   iconPlacement: {
     type: String,
-    default: "left",
-  },
+    default: 'left'
+  }
 });
 
 const { theme, dashed, size, round, disabled, circle } = props;
 const solts = useSlots();
 const classes = computed(() => {
-  // class样式数组 
+  // class样式数组
   return {
     [`xp-theme-${theme}`]: theme,
     [`is-dashed`]: dashed,
     [`xp-button-${size}`]: size,
     [`is-round`]: round,
     [`is-circle`]: circle,
-    [`is-disabled`]: disabled,
+    [`is-disabled`]: disabled
   };
 });
 </script>
 
 <script lang="ts">
 export default {
-  name: "xpButton",
+  name: 'xpButton'
 };
 </script>

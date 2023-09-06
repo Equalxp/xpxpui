@@ -6,7 +6,7 @@ import { sidebar } from './utils/sidebar'
 export default {
   title: 'Xpxp UI',
   description: 'Just playing around.',
-  base: process.env.NODE_ENV === 'production' ? '/kittyui/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/xpxpui/' : '/',
   head: [
     [
       'meta',
@@ -19,13 +19,14 @@ export default {
 
   lastUpdated: true,
   themeConfig: {
+    // logo: '/logo.png',
     lastUpdatedText: '最后更新时间',
     nav,
     sidebar,
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://gitee.com/geeksdidi/kittyui'
+        link: 'https://github.com/Equalxp/xpxpui'
       }
     ],
   },
@@ -33,15 +34,4 @@ export default {
   //   config: (md) => mdPlugin(md)
   // }
 }
-
-// export default {
-//   themeConfig: {
-//     siteTitle: "vitepress",
-//     nav,
-//     sidebar,
-//     socialLinks: [
-//       { icon: "github", link: "https://github.com/Equalxp/xpxpui" },
-//     ],
-//   },
-// };
 

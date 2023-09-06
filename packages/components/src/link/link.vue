@@ -1,12 +1,20 @@
 <template>
   <a class="xp-link" :class="classes">
     <!-- 图标icon 左边 -->
-    <xp-icon v-if="icon && iconPlacement === 'left'" :size="iconSize" class="xp-icon-left">
+    <xp-icon
+      v-if="icon && iconPlacement === 'left'"
+      :size="iconSize"
+      class="xp-icon-left"
+    >
       <component :is="icon" />
     </xp-icon>
     <slot></slot>
     <!-- 图标icon 右边 -->
-    <xp-icon v-if="icon && iconPlacement === 'right'" :size="iconSize" class="xp-icon-right">
+    <xp-icon
+      v-if="icon && iconPlacement === 'right'"
+      :size="iconSize"
+      class="xp-icon-right"
+    >
       <component :is="icon" />
     </xp-icon>
   </a>
@@ -14,7 +22,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import './style/index.less'
+import './style/index.less';
 const props = defineProps({
   type: {
     type: String,
@@ -26,35 +34,34 @@ const props = defineProps({
   },
   disabled: {
     type: Boolean,
-    deafult: false,
+    deafult: false
   },
   icon: {
-    type: [String, Object],
+    type: [String, Object]
   },
   iconPlacement: {
     type: String,
-    default: "left",
+    default: 'left'
   },
   iconSize: {
     type: [Number, String],
-    default: "18px",
-  },
-})
+    default: '18px'
+  }
+});
 
 const { type, underline, disabled } = props;
 
 const classes = computed(() => {
   return {
     [`xp-link-${type}`]: type,
-    ["xp-link-underline"]: underline,
-    ["xp-link-disabled"]: disabled,
-  }
-})
-
+    ['xp-link-underline']: underline,
+    ['xp-link-disabled']: disabled
+  };
+});
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpLink",
+  name: 'XpLink'
 };
 </script>

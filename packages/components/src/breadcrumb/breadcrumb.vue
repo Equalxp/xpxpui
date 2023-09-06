@@ -6,25 +6,24 @@
 </template>
 
 <script setup lang="ts">
-import { provide } from 'vue'
-import './style/index.less'
+import { provide } from 'vue';
+import './style/index.less';
 // props值
 const props = defineProps({
   separator: {
     type: String,
-    default: "/",
+    default: '/'
   },
   separatorIcon: {
-    type: Object,
-  },
-})
+    type: Object
+  }
+});
 // k-v
-provide("XpBreadcrumbKey", props);
-
+provide('XpBreadcrumbKey', props);
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpBreadcrumb",
+  name: 'XpBreadcrumb'
 };
 </script>

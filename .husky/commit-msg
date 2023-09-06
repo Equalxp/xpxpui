@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+# .husky/.husky/commit-msg
+# feat(global): 添加commitlint规范
+npx --no -- commitlint --edit "$1"

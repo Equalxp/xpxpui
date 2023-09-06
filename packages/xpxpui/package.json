@@ -26,6 +26,16 @@
     "url": "https://github.com/Equalxp/xpxpui"
   },
   "dependencies": {
-    "@xpxpui/utils": "workspace:^"
+    "@vicons/antd": "^0.12.0",
+    "@vicons/carbon": "^0.12.0",
+    "@vicons/fa": "^0.12.0",
+    "@vicons/fluent": "^0.12.0",
+    "@vicons/ionicons4": "^0.12.0",
+    "@vicons/ionicons5": "^0.12.0",
+    "@vicons/tabler": "^0.12.0",
+    "@vicons/utils": "^0.1.4",
+    "@xpxpui/utils": "workspace:^",
+    "animate.css": "^4.1.1",
+    "vue-router": "^4.2.4"
   }
 }

@@ -1,4 +1,4 @@
-import messgae from './message-method'
-import { withInstall } from '@xpxpui/utils'
-const Messgae = withInstall(messgae)
-export default Messgae
+import messgae from './message-method';
+import { withInstall } from '@xpxpui/utils';
+const XpMessgae = withInstall(messgae);
+export default XpMessgae;

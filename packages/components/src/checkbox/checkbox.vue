@@ -1,5 +1,10 @@
 <template>
-  <label class="xp-checkbox" :class="classes" @click="handleChange" tabindex='0'>
+  <label
+    class="xp-checkbox"
+    :class="classes"
+    @click="handleChange"
+    tabindex="0"
+  >
     <!-- 选择图标 -->
     <span class="xp-checkbox-input" :class="classes">
       <!-- 选择上的图标icon  -->
@@ -16,13 +21,13 @@
 </template>
 
 <script setup lang="ts">
-import './style/index.less'
-import { Check } from '@vicons/fa'
-import { checkboxProps, checkboxEmits, useCheckbox } from "./checkbox";
-import { Subtract12Filled } from "@vicons/fluent";
+import './style/index.less';
+import { Check } from '@vicons/fa';
+import { checkboxProps, checkboxEmits, useCheckbox } from './checkbox';
+import { Subtract12Filled } from '@vicons/fluent';
 
-const props = defineProps(checkboxProps)
-const emits = defineEmits(checkboxEmits)
+const props = defineProps(checkboxProps);
+const emits = defineEmits(checkboxEmits);
 
 const {
   modelValue,
@@ -32,11 +37,11 @@ const {
   disabled,
   iconColor,
   isGroup,
-  indeterminate,
+  indeterminate
 } = useCheckbox(props, emits);
 
 const handleChange = () => {
-  if(!disabled.value) {
+  if (!disabled.value) {
     if (isGroup.value) {
       const index = modelValue.value.indexOf(label.value);
       if (index > -1) {
@@ -49,12 +54,11 @@ const handleChange = () => {
       modelValue.value = !modelValue.value;
     }
   }
-}
-
+};
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpCheckbox",
+  name: 'XpCheckbox'
 };
 </script>

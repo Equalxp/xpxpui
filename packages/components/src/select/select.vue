@@ -1,10 +1,10 @@
 <template>
-  <div 
+  <div
     class="xp-select"
     :tabindex="disabled ? '' : -1"
     ref="selectRef"
     :class="{
-      'is-disabled': disabled,
+      'is-disabled': disabled
     }"
   >
     <!-- 非多选状态 -->
@@ -12,7 +12,9 @@
       <!-- label显示 -->
       <div v-show="modelLabel" class="xp-select-label">{{ modelLabel }}</div>
       <!-- placeholder -->
-      <div v-show="!modelLabel" class="xp-select-placeholder">{{ placeholder }}</div>
+      <div v-show="!modelLabel" class="xp-select-placeholder">
+        {{ placeholder }}
+      </div>
       <!-- 后缀图标的显示 -->
       <xp-icon
         :size="18"
@@ -33,11 +35,11 @@
       <!-- tag类型的 -->
       <xp-tag
         closeable
-        v-for="(item,index) in modelLabel"
+        v-for="(item, index) in modelLabel"
         :key="index"
         @close="handleClear(item)"
       >
-       {{ item }}
+        {{ item }}
       </xp-tag>
       <div v-show="modelLabel.length === 0" class="xp-select-placeholder">
         {{ placeholder }}
@@ -58,18 +60,16 @@
     </div>
     <!-- 下拉框的各个选项 -->
     <div class="xp-select-dropdown">
-      <div class="no-options" v-show="options.length === 0">
-        无选项
-      </div>
+      <div class="no-options" v-show="options.length === 0">无选项</div>
       <span
         class="xp-select-option"
         v-for="item in options"
-        :class="{ 
+        :class="{
           'is-active': multiple
             ? modelValue.includes(item.value)
             : modelValue === item.value,
           'is-disabled': item.disabled,
-          'is-multiple': multiple,
+          'is-multiple': multiple
         }"
         @click="handleOptionClick(item)"
         :key="item.value"
@@ -88,31 +88,31 @@
 </template>
 
 <script setup lang="ts">
-import { ref, nextTick } from "vue";
-import { IosArrowDown } from "@vicons/ionicons4"
-import { CloseCircleOutline } from "@vicons/ionicons5";
-import { Check } from "@vicons/tabler";
-import { selectProps, selectEmits, useSelect } from "./select";
-import './style/index.less'
+import { ref, nextTick } from 'vue';
+import { IosArrowDown } from '@vicons/ionicons4';
+import { CloseCircleOutline } from '@vicons/ionicons5';
+import { Check } from '@vicons/tabler';
+import { selectProps, selectEmits, useSelect } from './select';
+import './style/index.less';
 const props = defineProps(selectProps);
 const emits = defineEmits(selectEmits);
 
-const selectRef = ref()
-const { 
-  options, 
-  modelValue, 
-  modelLabel, 
-  disabled, 
-  placeholder, 
+const selectRef = ref();
+const {
+  options,
+  modelValue,
+  modelLabel,
+  disabled,
+  placeholder,
   clearable,
   closeVisible,
-  multiple,
-} = useSelect(props,emits)
+  multiple
+} = useSelect(props, emits);
 // 选中某一个
 
-const handleOptionClick = (item:any) => {
-  console.log('点击的item',item.value);
-  if(!item.disabled) {
+const handleOptionClick = (item: any) => {
+  console.log('点击的item', item.value);
+  if (!item.disabled) {
     // emits("update:modelValue", item.value);
     // emits("change", item.value);
     // 是多选的情况
@@ -120,26 +120,26 @@ const handleOptionClick = (item:any) => {
       // 多选 modelValue就有多个值 item.value是下拉选择的值
       const isRemove = modelValue.value.includes(item.value);
       isRemove
-        // 删除这个
-        ? modelValue.value.splice(modelValue.value.indexOf(item.value), 1)
+        ? // 删除这个
+          modelValue.value.splice(modelValue.value.indexOf(item.value), 1)
         : modelValue.value.push(item.value);
-      emits("update:modelValue", modelValue.value);
-      emits("change", modelValue.value);
+      emits('update:modelValue', modelValue.value);
+      emits('change', modelValue.value);
     }
     if (!multiple.value) {
       selectRef.value.blur();
-      emits("update:modelValue", item.value);
-      emits("change", item.value);
+      emits('update:modelValue', item.value);
+      emits('change', item.value);
     }
   }
-}
+};
 // 清除
-const handleClear = (e:any) => {
+const handleClear = (e: any) => {
   // emits('update:modelValue',"")
   // emits('clear',"")
   if (!multiple.value) {
-    emits("update:modelValue", "");
-    emits("clear", "");
+    emits('update:modelValue', '');
+    emits('clear', '');
   }
   if (multiple.value) {
     // @ts-ignore
@@ -149,16 +149,16 @@ const handleClear = (e:any) => {
     } else {
       modelValue.value.splice(0, modelValue.value.length);
     }
-    emits("update:modelValue", modelValue.value);
-    emits("clear", modelValue.value);
+    emits('update:modelValue', modelValue.value);
+    emits('clear', modelValue.value);
   }
-}
+};
 // 所有的options / ComputedRef<"x">
 // console.log('222',options,modelValue);
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpSelect",
+  name: 'XpSelect'
 };
 </script>

@@ -6,6 +6,6 @@ export const nav = [
   },
   {
     text: '基础组件',
-    link: '/components/button/'
+    link: '/components/button'
   }
 ]

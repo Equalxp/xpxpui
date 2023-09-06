@@ -8,29 +8,27 @@
 </template>
 
 <script setup lang="ts">
-import { useThrottleFn } from "@xpxpui/utils";
-import './style/index.less'
+import { useThrottleFn } from '@xpxpui/utils';
+import './style/index.less';
 const props = defineProps({
   dir: {
     type: String,
     default: ''
   }
-})
+});
 
-const emits = defineEmits(['dirClick'])
+const emits = defineEmits(['dirClick']);
 
-const _dirClick = (dir:String) => {
-  emits('dirClick',dir)
-}
+const _dirClick = (dir: string) => {
+  emits('dirClick', dir);
+};
 
 // 节流
-const dirClick = useThrottleFn(_dirClick,500)
-
-
+const dirClick = useThrottleFn(_dirClick, 500);
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpCarouselDirector",
+  name: 'XpCarouselDirector'
 };
 </script>

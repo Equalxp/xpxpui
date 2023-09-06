@@ -1,27 +1,27 @@
-import { inject, computed } from "vue";
+import { inject, computed } from 'vue';
 
 export const radioProps = {
   modelValue: {
     type: [String, Number, Boolean],
-    default: "",
+    default: ''
   },
   label: {
-    type: [String,Number,Boolean],
-    default: ""
+    type: [String, Number, Boolean],
+    default: ''
   },
   disabled: Boolean,
   size: String,
-  border: Boolean,
-}
+  border: Boolean
+};
 
-export const radioEmits = ['update:modelValue']
+export const radioEmits = ['update:modelValue'];
 
-export const useRadio = (props,emits) => {
+export const useRadio = (props, emits) => {
   // 祖代之间的传值 inject
-  const radioGroupProp = inject("radioGroupKey", undefined);
+  const radioGroupProp = inject('radioGroupKey', undefined);
   const isGroup = computed(() => !!radioGroupProp);
   const modelValue = computed({
-    // 两个radio的v-model都是同一个值 
+    // 两个radio的v-model都是同一个值
     get() {
       return isGroup.value ? radioGroupProp.modelValue : props.modelValue;
     },
@@ -31,11 +31,11 @@ export const useRadio = (props,emits) => {
       if (isGroup.value) {
         radioGroupProp.changeEvent(val);
       } else {
-        emits("update:modelValue", val);
-        emits("change", val);
+        emits('update:modelValue', val);
+        emits('change', val);
       }
     }
-  })
+  });
   const disabled = computed(() =>
     props.disabled ? props.disabled : radioGroupProp?.disabled
   );
@@ -49,10 +49,10 @@ export const useRadio = (props,emits) => {
 
   const classes = computed(() => ({
     // 选中的状态就是让v-model的值和标签的label值相同
-    "is-checked": modelValue.value === label.value,
-    "is-disabled": disabled.value,
+    'is-checked': modelValue.value === label.value,
+    'is-disabled': disabled.value,
     [`xp-radio-${size.value}`]: size.value,
-    "is-bordered": border.value,
+    'is-bordered': border.value
   }));
 
   return {
@@ -60,6 +60,6 @@ export const useRadio = (props,emits) => {
     disabled,
     size,
     label,
-    classes,
+    classes
   };
-}
+};

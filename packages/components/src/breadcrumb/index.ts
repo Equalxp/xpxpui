@@ -1,5 +1,5 @@
-import breadcrumb from './breadcrumb.vue'
-import breadcrumbitem from './breadcrumb-item.vue'
-import { withInstall } from '@xpxpui/utils'
-export const Breadcrumb = withInstall(breadcrumb)
-export const BreadcrumbItem = withInstall(breadcrumbitem)
+import breadcrumb from './breadcrumb.vue';
+import breadcrumbitem from './breadcrumb-item.vue';
+import { withInstall } from '@xpxpui/utils';
+export const XpBreadcrumb = withInstall(breadcrumb);
+export const XpBreadcrumbItem = withInstall(breadcrumbitem);

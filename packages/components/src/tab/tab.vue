@@ -4,12 +4,12 @@
 
 <script setup lang="ts">
 defineProps({
-  // props传递的值 
-  title: String,
+  // props传递的值
+  title: String
 });
 </script>
 <script lang="ts">
 export default {
-  name: "XpTab",
+  name: 'XpTab'
 };
 </script>

@@ -1,0 +1,32 @@
+.xp-message {
+  --xp-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  z-index: 1000;
+  left: calc(50% - 190px);
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 15px 15px 15px 20px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 380px;
+  color: #333639;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  transition: color 0.3s var(--xp-bezier), box-shadow 0.3s var(--xp-bezier), background-color 0.3s var(--xp-bezier), opacity 0.3s var(--xp-bezier), transform 0.3s var(--xp-bezier), margin-bottom 0.3s var(--xp-bezier), top 0.3s var(--xp-bezier);
+}
+.xp-message.is-close {
+  padding-right: 38px;
+}
+.xp-message.is-center {
+  justify-content: center;
+}
+.xp-message .xp-message-icon {
+  margin-right: 10px;
+}
+.xp-message .xp-close-icon {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 10px);
+  cursor: pointer;
+}

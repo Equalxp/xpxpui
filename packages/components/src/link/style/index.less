@@ -4,7 +4,6 @@
 @success-color: #85ce61;
 @warning-color: #f0a020;
 @error-color: #d03050;
-
 @font-size: 16px;
 
 .xp-link {
@@ -20,10 +19,12 @@
   &.xp-link-default {
     color: @default-color;
     &:hover {
-      color: @primary-color
+      color: @primary-color;
     }
+    // 有下划线属性后
     &.xp-link-underline:hover:after {
-      border-bottom: 1px solid @primary-color;
+      // border-bottom线
+      // border-bottom: 1px solid @primary-color;
     }
     &.xp-link-disabled {
       color: lighten(@default-color,50%);
@@ -37,6 +38,7 @@
     color: @primary-color;
     &:hover {
       color: lighten(@primary-color, 20%);
+      
     }
     &.xp-link-underline:hover:after {
       border-bottom: 1px solid lighten(@primary-color, 20%);

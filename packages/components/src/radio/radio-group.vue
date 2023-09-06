@@ -5,37 +5,37 @@
 </template>
 
 <script setup lang="ts">
-import { provide, reactive, toRefs } from "vue";
+import { provide, reactive, toRefs } from 'vue';
 
 const props = defineProps({
   modelValue: {
     type: [String, Number, Boolean],
-    default: "",
+    default: ''
   },
   disabled: Boolean,
   size: String,
   border: Boolean
 });
-const emits = defineEmits(["update:modelValue", "change"]);
+const emits = defineEmits(['update:modelValue', 'change']);
 
 const changeEvent = (value: any) => {
-  emits("update:modelValue", value);
-  emits("change", value);
+  emits('update:modelValue', value);
+  emits('change', value);
 };
 
 // provide k-v
 provide(
-  "radioGroupKey",
+  'radioGroupKey',
   reactive({
     ...toRefs(props),
-    changeEvent,
+    changeEvent
   })
 );
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpRadioGroup",
+  name: 'XpRadioGroup'
 };
 </script>
 

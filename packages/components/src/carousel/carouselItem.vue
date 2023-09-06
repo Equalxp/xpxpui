@@ -7,33 +7,29 @@
 </template>
 
 <script setup lang="ts">
-import './style/index.less'
-import {
-  getCurrentInstance,
-  inject,
-  reactive,
-  toRefs,
-  watch
-} from 'vue'
+import './style/index.less';
+import { getCurrentInstance, inject, reactive, toRefs, watch } from 'vue';
 
-const parentData = inject('XpCarouselParentKey')
-const instance = getCurrentInstance()
+const parentData = inject('XpCarouselParentKey');
+const instance = getCurrentInstance();
 const state = reactive({
   selfIndex: instance.vnode.key,
   currentIndex: parentData.currentIndex
-})
-watch(() => {
-  return parentData.currentIndex;
-}, (value) => {
-  state.currentIndex = value
-})
+});
+watch(
+  () => {
+    return parentData.currentIndex;
+  },
+  (value) => {
+    state.currentIndex = value;
+  }
+);
 
-const { selfIndex, currentIndex } = toRefs(state)
-
+const { selfIndex, currentIndex } = toRefs(state);
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpCarouselItem",
+  name: 'XpCarouselItem'
 };
 </script>

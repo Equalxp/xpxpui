@@ -8,29 +8,22 @@
 </template>
 
 <script setup lang="ts">
-import { useRadio, radioProps, radioEmits } from "./radio";
-import './style/index.less'
+import { useRadio, radioProps, radioEmits } from './radio';
+import './style/index.less';
 const props = defineProps(radioProps);
 const emits = defineEmits(radioEmits);
 
-const {
-  modelValue,
-  label,
-  size,
-  disabled,
-  classes
-} = useRadio(props, emits);
+const { modelValue, label, size, disabled, classes } = useRadio(props, emits);
 
 const handleChange = () => {
-  if(!disabled.value) {
-    modelValue.value = props.label
+  if (!disabled.value) {
+    modelValue.value = props.label;
   }
-}
+};
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpRadio",
+  name: 'XpRadio'
 };
 </script>
-

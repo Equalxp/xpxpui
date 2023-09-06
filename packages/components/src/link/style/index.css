@@ -14,9 +14,6 @@
 .xp-link.xp-link-default:hover {
   color: #36ad6a;
 }
-.xp-link.xp-link-default.xp-link-underline:hover:after {
-  border-bottom: 1px solid #36ad6a;
-}
 .xp-link.xp-link-default.xp-link-disabled {
   color: #b3b3b3;
 }

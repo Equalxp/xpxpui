@@ -3,24 +3,54 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+      "stylelint --fix \"packages/components/src/**/*.{css,less}\""
+    ]
+  },
   "scripts": {
     "build:xpxpui": "gulp -f packages/components/script/build/index.ts",
-    "publish:xpxpui": "gulp -f packages/components/script/publish/index.ts"
+    "publish:xpxpui": "gulp -f packages/components/script/publish/index.ts",
+    "docs:dev": "pnpm run docs:dev --filter site",
+    "docs:build": "pnpm run docs:build --filter site",
+    "docs:serve": "pnpm run docs:serve --filter site ",
+    "exm:dev": "pnpm run dev --filter examples",
+    "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+    "lint:style": "stylelint --fix \"*.{css,less}\"",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/gulp": "^4.0.13",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-less": "^0.0.33",
     "@types/node": "^20.5.8",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "@vicons/material": "^0.12.0",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/runtime-core": "^3.3.4",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-less": "^5.0.0",
+    "husky": "^8.0.3",
     "less": "^4.2.0",
+    "prettier": "^3.0.3",
     "release-it": "^16.1.5",
     "sucrase": "^3.34.0",
     "typescript": "^5.2.2",

@@ -20,7 +20,9 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
+    "@vicons/material": "^0.12.0",
     "unplugin-vue-setup-extend-plus": "^1.0.0",
+    "vue-router": "^4.2.4",
     "xpxpui": "workspace:^"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 300px;">
+  <div style="width: 300px">
     <xp-alert title="Default 类型" />
     <xp-alert title="Info 类型" type="info" />
     <xp-alert title="Success 类型" type="success" />
@@ -18,13 +18,18 @@
     <xp-alert title="Success 类型" type="success" show-icon />
     <xp-alert title="Warning 类型" type="warning" show-icon />
     <xp-alert title="Error 类型" type="error" show-icon center />
-    <xp-alert title="Success 类型" type="success" show-icon center description="这是一段描述" />
+    <xp-alert
+      title="Success 类型"
+      type="success"
+      show-icon
+      center
+      description="这是一段描述"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { IosAirplane } from "@vicons/ionicons4";
-
+import { IosAirplane } from '@vicons/ionicons4';
 </script>
 
 <style lang="less" scoped>

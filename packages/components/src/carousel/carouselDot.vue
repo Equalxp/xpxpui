@@ -6,18 +6,20 @@
       <a
         href="javascript:;"
         class="dot-lk"
-        :style="{ backgroundColor: (item) - 1 === currentIndex ? dotBgColor : '#fff' }"
+        :style="{
+          backgroundColor: item - 1 === currentIndex ? dotBgColor : '#fff'
+        }"
         @click="dotClick(item - 1)"
       ></a>
     </div>
-  </div>    
+  </div>
 </template>
 
 <script setup lang="ts">
-import './style/index.less'
+import './style/index.less';
 const props = defineProps({
   itemLen: {
-    type: Number,
+    type: Number
   },
   currentIndex: {
     type: Number
@@ -30,18 +32,17 @@ const props = defineProps({
     type: String,
     default: '#ff5000'
   }
-})
+});
 
-const emits = defineEmits(['dotClick'])
+const emits = defineEmits(['dotClick']);
 
-const dotClick = (index:Number) => {
-  emits('dotClick',index)
-}
-
+const dotClick = (index: number) => {
+  emits('dotClick', index);
+};
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpCarouselDot",
+  name: 'XpCarouselDot'
 };
 </script>

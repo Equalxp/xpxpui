@@ -7,8 +7,7 @@
         class="xp-dialog-overlay"
         v-if="overlay"
         @click="onOverlayClick"
-      >
-      </div>
+      ></div>
       <div class="xp-dialog">
         <!-- dialog框 -->
         <div class="xp-dialog-wrapper">
@@ -36,46 +35,46 @@
 </template>
 
 <script setup lang="ts">
-import { CloseOutline } from '@vicons/ionicons5'
-import './style/index.less'
+import { CloseOutline } from '@vicons/ionicons5';
+import './style/index.less';
 const props = defineProps({
   // v-model传递的值
   modelValue: {
     type: Boolean,
-    default: false,
+    default: false
   },
   overlay: {
     type: true,
-    default: true,
+    default: true
   },
   title: {
     type: String,
-    default: "标题",
+    default: '标题'
   },
   overlayClosable: {
     type: Boolean,
-    default: true,
+    default: true
   },
   confirm: {
-    type: Function,
+    type: Function
   },
   cancel: {
-    type: Function,
-  },
+    type: Function
+  }
 });
 
-const emit = defineEmits(["update:modelValue", "onOverlayClick"]);
+const emit = defineEmits(['update:modelValue', 'onOverlayClick']);
 
 // 关闭按钮
 const close = () => {
-  emit("update:modelValue", false);
+  emit('update:modelValue', false);
 };
 
 const onOverlayClick = () => {
   if (props.overlayClosable) {
     close();
   }
-  emit("onOverlayClick");
+  emit('onOverlayClick');
 };
 
 // 确定按钮
@@ -94,6 +93,6 @@ const cancel = () => {
 </script>
 <script lang="ts">
 export default {
-  name: "XpDialog",
+  name: 'XpDialog'
 };
 </script>

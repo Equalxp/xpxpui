@@ -20,9 +20,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-const selected = ref("我们");
-const selected1 = ref("半推半就");
+import { ref } from 'vue';
+const selected = ref('我们');
+const selected1 = ref('半推半就');
 </script>
 
 <style scoped></style>

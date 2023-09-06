@@ -65,52 +65,51 @@
 </template>
 
 <script setup lang="ts">
-import { computed,ref } from "vue";
-import { Info24Filled } from "@vicons/fluent";
-import { IosCheckmarkCircle } from "@vicons/ionicons4";
-import { WarningFilled } from "@vicons/carbon";
-import { CloseCircle, Close } from "@vicons/ionicons5";
-import './style/index.less'
+import { computed, ref } from 'vue';
+import { Info24Filled } from '@vicons/fluent';
+import { IosCheckmarkCircle } from '@vicons/ionicons4';
+import { WarningFilled } from '@vicons/carbon';
+import { CloseCircle, Close } from '@vicons/ionicons5';
+import './style/index.less';
 // props接收的参数
 const props = defineProps({
   title: {
     type: String,
-    default: "Title"
+    default: 'Title'
   },
   description: {
     type: String,
-    default: "",
+    default: ''
   },
   type: {
     type: String,
-    default: "default",
+    default: 'default'
   },
   closeable: {
     type: Boolean,
-    default: false,
+    default: false
   },
   showIcon: Boolean,
-  center: Boolean,
-})
-const emits = defineEmits(['close'])
+  center: Boolean
+});
+const emits = defineEmits(['close']);
 // 类型 居中 关闭按钮
 const classes = computed(() => ({
   [`xp-alert-${props.type}`]: props.type,
-  "is-center": props.center,
-  "show-close": props.closeable
-}))
+  'is-center': props.center,
+  'show-close': props.closeable
+}));
 
-const visible = ref(true)
+const visible = ref(true);
 
 const close = () => {
   visible.value = false;
-  emits('close')
+  emits('close');
 };
-
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpAlert",
+  name: 'XpAlert'
 };
 </script>

@@ -1,60 +1,72 @@
-
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import dts from "vite-plugin-dts";
-import { resolve } from "path";
-import DefineOptions from "unplugin-vue-define-options/vite";
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
+import DefineOptions from 'unplugin-vue-define-options/vite';
 export default defineConfig({
   build: {
     //打包文件目录
-    outDir: "es",
+    outDir: 'es',
     //压缩
     //minify: false,
     rollupOptions: {
       //忽略打包vue和.less文件
-      external: ["vue", /\.less/, "@xpxpui/utils"],
-      input: ["index.ts"],
+      external: [
+        'vue',
+        /\.less/,
+        '@xpxpui/utils',
+        'vue-router',
+        '@vicons/antd',
+        '@vicons/antd',
+        '@vicons/fa',
+        '@vicons/fluent',
+        '@vicons/ionicons4',
+        '@vicons/ionicons5',
+        '@vicons/tabler',
+        '@vicons/utils',
+        '@vicons/carbon',
+        'animate.css'
+      ],
+      input: ['index.ts'],
       output: [
         {
           //打包格式
-          format: "es",
+          format: 'es',
           //打包后文件名
-          entryFileNames: "[name].mjs",
+          entryFileNames: '[name].mjs',
           //让打包目录和我们目录对应
           preserveModules: true,
-          exports: "named",
+          exports: 'named',
           //配置打包根目录
-          dir: "../xpxpui/es",
+          dir: '../xpxpui/es'
         },
         {
           //打包格式
-          format: "cjs",
+          format: 'cjs',
           //打包后文件名
-          entryFileNames: "[name].js",
+          entryFileNames: '[name].js',
           //让打包目录和我们目录对应
           preserveModules: true,
-          exports: "named",
+          exports: 'named',
           //配置打包根目录
-          dir: "../xpxpui/lib",
-        },
-      ],
+          dir: '../xpxpui/lib'
+        }
+      ]
     },
     lib: {
-      entry: "./index.ts",
-      name:'xpxpui'
-    },
+      entry: './index.ts'
+    }
   },
   plugins: [
     vue(),
     dts({
-      entryRoot: "./src",
-      outputDir: ["../xpxpui/es/src", "../xpxpui/lib/src"],
+      entryRoot: './src',
+      outputDir: ['../xpxpui/es/src', '../xpxpui/lib/src'],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
-      tsConfigFilePath: "../../tsconfig.json",
+      tsConfigFilePath: '../../tsconfig.json'
     }),
     DefineOptions(),
     {
-      name: "style",
+      name: 'style',
       generateBundle(config, bundle) {
         //这里可以获取打包后的文件目录以及代码code
         const keys = Object.keys(bundle);
@@ -64,17 +76,12 @@ export default defineConfig({
           //rollup内置方法,将所有输出文件code中的.less换成.css,因为我们当时没有打包less文件
 
           this.emitFile({
-            type: "asset",
+            type: 'asset',
             fileName: key, //文件名名不变
-            source: bundler.code.replace(/\.less/g, ".css"),
+            source: bundler.code.replace(/\.less/g, '.css')
           });
         }
-      },
-    },
-  ],
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "src"),
-    },
-  }
+      }
+    }
+  ]
 });

@@ -1,8 +1,8 @@
 <template>
   <div :class="classes">
     <!-- input框 -->
-    <template v-if="type !=='textarea'">
-      <input 
+    <template v-if="type !== 'textarea'">
+      <input
         ref="input"
         :disabled="disabled"
         :type="type"
@@ -78,18 +78,18 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref, nextTick } from 'vue'
-import { inputEmit, inputProps, useInput } from "./input";
-import './style/index.less'
+import { computed, onMounted, ref, nextTick } from 'vue';
+import { inputEmit, inputProps, useInput } from './input';
+import './style/index.less';
 import { CloseCircleOutline } from '@vicons/ionicons5';
 import { Eye } from '@vicons/fa';
 
 type TargetElement = HTMLInputElement | HTMLTextAreaElement;
 
 // 接收props的类型限定
-const props = defineProps(inputProps)
+const props = defineProps(inputProps);
 // ()传入自定义事件名数组 接收传来的函数
-const emits = defineEmits(inputEmit)
+const emits = defineEmits(inputEmit);
 
 const {
   disabled,
@@ -101,9 +101,9 @@ const {
   suffixIcon,
   prefixIcon,
   readonly,
-  nativeInputValue,
+  nativeInputValue
   // 计算computed
-} = useInput(props,emits)
+} = useInput(props, emits);
 
 // tag
 const input = ref<HTMLInputElement>();
@@ -111,33 +111,33 @@ const textarea = ref<HTMLTextAreaElement>();
 const inputOrTextarea = computed(() => input.value || textarea.value);
 
 // input输入触发这个函数 函数拿到input框的内容 然后触发返回v-model
-const handleChange = (e:event) => {
-  console.log('handlechange',e.target.value);
+const handleChange = (e: event) => {
+  console.log('handlechange', e.target.value);
   // e.target.value -> input框的内容
-  const { value } = e.target as TargetElement
-  if(value === nativeInputValue.value) {
-    return
+  const { value } = e.target as TargetElement;
+  if (value === nativeInputValue.value) {
+    return;
   }
-  // 触发函数 且传递值 
+  // 触发函数 且传递值
   // v-model值 + value值
-  emits("update:modelValue", value);
-  emits("input", value);
-}
+  emits('update:modelValue', value);
+  emits('input', value);
+};
 
 // 清空输入框的内容
 const hanldeClear = () => {
   // 触发事件 传值给v-model 值是"""
-  emits("update:modelValue", "");
-  emits("input", "");
-  emits("clear", "");
-}
+  emits('update:modelValue', '');
+  emits('input', '');
+  emits('clear', '');
+};
 
 const handleBlur = (e) => {
-  emits("blur", e);
+  emits('blur', e);
 };
 
 const handleFocus = (e) => {
-  emits("focus", e);
+  emits('focus', e);
 };
 
 const focus = () => {
@@ -181,13 +181,12 @@ defineExpose({
   textarea,
   blur,
   focus,
-  select,
+  select
 });
-
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpInput",
+  name: 'XpInput'
 };
 </script>

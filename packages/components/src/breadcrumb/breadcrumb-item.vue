@@ -4,7 +4,7 @@
     <span
       class="xp-breadcrumb-inner"
       :class="{
-        'is-link': to,
+        'is-link': to
       }"
       @click="handleClick"
     >
@@ -25,23 +25,23 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
-import { useRouter } from "vue-router";
-import './style/index.less'
+import { inject } from 'vue';
+import { useRouter } from 'vue-router';
+import './style/index.less';
 const props = defineProps({
   // 路由跳转路径
   to: {
     type: Object,
-    default: () => {},
+    default: () => {}
   },
   replace: {
     type: Boolean,
-    default: false,
-  },
+    default: false
+  }
 });
 const router = useRouter();
 // 取得父组件的props的值
-const parent = inject("XpBreadcrumbKey", undefined);
+const parent = inject('XpBreadcrumbKey', undefined);
 
 // 路由跳转
 const handleClick = () => {
@@ -49,11 +49,10 @@ const handleClick = () => {
   if (!props.to || !router) return;
   props.replace ? router.replace(props.to) : router.push(props.to);
 };
-
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpBreadcrumbItem",
+  name: 'XpBreadcrumbItem'
 };
 </script>

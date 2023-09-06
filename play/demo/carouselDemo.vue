@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <xp-carousel :autoplay="true" :duration="3000" :initial="0" :hasDot="true" :hasDirector="true" dotBgColor="#000">
+    <xp-carousel
+      :autoplay="true"
+      :duration="3000"
+      :initial="0"
+      :hasDot="true"
+      :hasDirector="true"
+      dotBgColor="#000"
+    >
       <XpCarouselItem v-for="(item, index) of carouselData" :key="index">
         <img :src="item.img_name" />
       </XpCarouselItem>
@@ -9,15 +16,15 @@
 </template>
 
 <script setup lang="ts">
-import xili from '../asset/image/carouselImages/xili.png'
-import blazer from "../assets/image/carouselImages/blazer.png"
-import mdla from "../assets/image/carouselImages/mdla.jpg"
-import staple from "../assets/image/carouselImages/staple.jpg"
-import milk from "../assets/image/carouselImages/milk.png"
+import xili from '../assets/image/carouselImages/xili.png';
+import blazer from '../assets/image/carouselImages/blazer.png';
+import mdla from '../assets/image/carouselImages/mdla.jpg';
+import staple from '../assets/image/carouselImages/staple.jpg';
+import milk from '../assets/image/carouselImages/milk.png';
 
 const carouselData = [
   {
-    img_name: xili,
+    img_name: xili
   },
   {
     img_name: blazer
@@ -30,9 +37,8 @@ const carouselData = [
   },
   {
     img_name: milk
-  },
-]
-
+  }
+];
 </script>
 
 <style lang="less" scoped>

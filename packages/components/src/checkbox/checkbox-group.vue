@@ -5,29 +5,28 @@
 </template>
 
 <script setup lang="ts">
-import { provide, reactive, toRefs } from "vue";
-import { checkboxGroupProps, checkboxGroupEmits } from "./checkbox-group";
-const props = defineProps(checkboxGroupProps)
+import { provide, reactive, toRefs } from 'vue';
+import { checkboxGroupProps, checkboxGroupEmits } from './checkbox-group';
+const props = defineProps(checkboxGroupProps);
 const emits = defineEmits(checkboxGroupEmits);
 
 const changeEvent = (value) => {
-  emits("update:modelValue", value);
-  emits("change", value);
-}
+  emits('update:modelValue', value);
+  emits('change', value);
+};
 
 // provide 注入 k-v 直系之间传递 只能在setup里面使用
 provide(
-  "checkboxGroupKey",
+  'checkboxGroupKey',
   reactive({
     ...toRefs(props),
-    changeEvent,
+    changeEvent
   })
 );
-
 </script>
 
 <script lang="ts">
 export default {
-  name: "XpCheckboxGroup",
+  name: 'XpCheckboxGroup'
 };
 </script>

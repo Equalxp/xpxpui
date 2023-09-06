@@ -4,13 +4,15 @@ layout: home
 title: Xpxpui
 titleTemplate: 一个Vue3组件库
 
+
+
 hero:
   name: Xpxpui
   text: 一个Vue3组件库
   tagline: 让你的组件库开发更简单
   image:
-    # /src: /logo.png
-    # alt: Xpxpui
+    src: /logo.png
+    alt: Xpxpui
   actions:
     - theme: brand
       text: 开始
