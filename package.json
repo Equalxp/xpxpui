@@ -50,6 +50,7 @@
     "gulp-less": "^5.0.0",
     "husky": "^8.0.3",
     "less": "^4.2.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "release-it": "^16.1.5",
     "sucrase": "^3.34.0",
