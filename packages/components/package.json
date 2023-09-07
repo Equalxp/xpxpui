@@ -6,9 +6,17 @@
   "scripts": {
     "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "xpxpui",
+    "vue3组件库"
+  ],
+  "author": "lxxp",
   "license": "ISC",
+  "typings": "lib/index.d.ts",
   "dependencies": {
     "@vicons/antd": "^0.12.0",
     "@vicons/carbon": "^0.12.0",
