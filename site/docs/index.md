@@ -5,7 +5,6 @@ title: Xpxpui
 titleTemplate: 一个Vue3组件库
 
 
-
 hero:
   name: Xpxpui
   text: 一个Vue3组件库
