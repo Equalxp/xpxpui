@@ -1,9 +1,9 @@
 {
   "name": "@xpxpui/utils",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "./index.ts",
-  "module": "./index.ts",
+  "main": "dist/lib/index.ts",
+  "module": "dist/es/index.ts",
   "files": [
     "dist"
   ],
@@ -12,5 +12,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
