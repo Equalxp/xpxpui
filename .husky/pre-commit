@@ -4,6 +4,7 @@ pnpm run lint-staged
 #pnpm run lint:script
 #pnpm run lint:style
 
+# feat(global): 添加commitlint规范
 #提交之前进行lint校验
 #build: 编译相关的修改，例如发布版本、对项目构建或者依赖的改动
 #chore: 其他修改, 比如改变构建流程、或者增加依赖库、工具等
