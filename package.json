@@ -27,6 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@release-it/conventional-changelog": "^7.0.1",
     "@types/gulp": "^4.0.13",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-less": "^0.0.33",
