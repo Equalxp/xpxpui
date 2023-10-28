@@ -4,9 +4,12 @@
 
 用于提醒用户某个信息传没有填写
 
+<ClientOnly>
+
 <div class="example">
 <demoVue />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

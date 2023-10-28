@@ -2,9 +2,12 @@
 
 ## 基础用法
 
+<ClientOnly>
+
 <div class="example">
 <selectDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -71,9 +74,12 @@ const options = [
 
 ## 禁用选项
 
+<ClientOnly>
+
 <div class="example">
 <selectDemo2 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -146,9 +152,12 @@ const options = [
 
 ## 禁用状态
 
+<ClientOnly>
+
 <div class="example">
 <selectDemo3 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -222,9 +231,12 @@ const options = [
 
 ## 可清空单选
 
+<ClientOnly>
+
 <div class="example">
 <selectDemo4 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -298,9 +310,12 @@ const options = [
 
 ## 多选
 
+<ClientOnly>
+
 <div class="example">
 <selectDemo5 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码

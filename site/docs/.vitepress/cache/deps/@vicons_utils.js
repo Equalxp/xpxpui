@@ -450,7 +450,7 @@ var mountStyle = () => {
   style.mount({ id: "xicons-icon" });
 };
 
-// ../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.4/node_modules/@vicons/utils/es/IconConfigProvider.js
+// ../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.7/node_modules/@vicons/utils/es/IconConfigProvider.js
 var iconConfigProviderProps = {
   size: [String, Number],
   color: String,
@@ -466,10 +466,10 @@ var IconConfigProvider = defineComponent({
   }
 });
 
-// ../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.4/node_modules/@vicons/utils/es/config.js
+// ../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.7/node_modules/@vicons/utils/es/config.js
 var defaultTag = "span";
 
-// ../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.4/node_modules/@vicons/utils/es/Icon.js
+// ../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.7/node_modules/@vicons/utils/es/Icon.js
 var Icon = defineComponent({
   name: "Icon",
   props: iconConfigProviderProps,

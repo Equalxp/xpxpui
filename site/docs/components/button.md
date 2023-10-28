@@ -4,9 +4,12 @@
 
 常用的操作按钮
 
+<ClientOnly>
+
 <div class="example">
 <buttonDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -81,9 +84,12 @@ import { Add16Regular } from "@vicons/fluent";
 
 ## 禁用
 
+<ClientOnly>
+
 <div class="example">
 <buttonDemo3 />
 </div>
+</ClientOnly>
 
 使用`disabled`控制按钮是否能使用
 
@@ -104,9 +110,12 @@ import { Add16Regular } from "@vicons/fluent";
 
 ## 图标
 
+<ClientOnly>
+
 <div class="example">
 <buttonDemo4 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -140,9 +149,12 @@ import { VehicleBicycle24Filled } from '@vicons/fluent'
 
 ## 加载
 
+<ClientOnly>
+
 <div class="example">
 <buttonDemo5 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码

@@ -2,9 +2,11 @@
 
 ## 基础用法
 
+<ClientOnly>
 <div class="example">
 <breadcrumbDemo1 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -27,10 +29,12 @@
 
 ## 图标分隔符
 
+
+<ClientOnly>
 <div class="example">
 <breadcrumbDemo2 />
 </div>
-
+</ClientOnly>
 
 ::: details 显示代码
 

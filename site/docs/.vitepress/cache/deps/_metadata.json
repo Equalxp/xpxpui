@@ -1,78 +1,75 @@
 {
-  "hash": "f179f629",
-  "browserHash": "16021d9e",
+  "hash": "68cf36e7",
+  "browserHash": "e82323ec",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "71fd8783",
+      "fileHash": "9bcde60d",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@6.5.1/node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "e02a1c28",
-      "needsInterop": false
-    },
-    "@vicons/utils": {
-      "src": "../../../../../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.4/node_modules/@vicons/utils/es/index.js",
-      "file": "@vicons_utils.js",
-      "fileHash": "c62f9f18",
+      "fileHash": "acba9a54",
       "needsInterop": false
     },
     "@vicons/ionicons5": {
       "src": "../../../../../node_modules/.pnpm/@vicons+ionicons5@0.12.0/node_modules/@vicons/ionicons5/es/index.js",
       "file": "@vicons_ionicons5.js",
-      "fileHash": "57d13cca",
+      "fileHash": "1c336670",
       "needsInterop": false
     },
     "@vicons/fa": {
       "src": "../../../../../node_modules/.pnpm/@vicons+fa@0.12.0/node_modules/@vicons/fa/es/index.js",
       "file": "@vicons_fa.js",
-      "fileHash": "e177a586",
+      "fileHash": "e109af44",
       "needsInterop": false
     },
     "@vicons/fluent": {
       "src": "../../../../../node_modules/.pnpm/@vicons+fluent@0.12.0/node_modules/@vicons/fluent/es/index.js",
       "file": "@vicons_fluent.js",
-      "fileHash": "0fb3ce11",
+      "fileHash": "b64d7c5d",
+      "needsInterop": false
+    },
+    "@vicons/utils": {
+      "src": "../../../../../node_modules/.pnpm/@vicons+utils@0.1.4_vue@3.3.7/node_modules/@vicons/utils/es/index.js",
+      "file": "@vicons_utils.js",
+      "fileHash": "f426e973",
       "needsInterop": false
     },
     "@vicons/ionicons4": {
       "src": "../../../../../node_modules/.pnpm/@vicons+ionicons4@0.12.0/node_modules/@vicons/ionicons4/es/index.js",
       "file": "@vicons_ionicons4.js",
-      "fileHash": "b56e33dc",
-      "needsInterop": false
-    },
-    "@vicons/tabler": {
-      "src": "../../../../../node_modules/.pnpm/@vicons+tabler@0.12.0/node_modules/@vicons/tabler/es/index.js",
-      "file": "@vicons_tabler.js",
-      "fileHash": "adc1f0ad",
+      "fileHash": "91528e4f",
       "needsInterop": false
     },
     "@vicons/carbon": {
       "src": "../../../../../node_modules/.pnpm/@vicons+carbon@0.12.0/node_modules/@vicons/carbon/es/index.js",
       "file": "@vicons_carbon.js",
-      "fileHash": "ba979a31",
+      "fileHash": "ac96b7c8",
+      "needsInterop": false
+    },
+    "@vicons/tabler": {
+      "src": "../../../../../node_modules/.pnpm/@vicons+tabler@0.12.0/node_modules/@vicons/tabler/es/index.js",
+      "file": "@vicons_tabler.js",
+      "fileHash": "fa902bf3",
       "needsInterop": false
     },
     "vue-router": {
-      "src": "../../../../../node_modules/.pnpm/vue-router@4.2.4_vue@3.3.4/node_modules/vue-router/dist/vue-router.mjs",
+      "src": "../../../../../node_modules/.pnpm/vue-router@4.2.4_vue@3.3.7/node_modules/vue-router/dist/vue-router.mjs",
       "file": "vue-router.js",
-      "fileHash": "408b95e9",
+      "fileHash": "535d4380",
       "needsInterop": false
     },
-    "@vicons/antd": {
-      "src": "../../../../../node_modules/.pnpm/@vicons+antd@0.12.0/node_modules/@vicons/antd/es/index.js",
-      "file": "@vicons_antd.js",
-      "fileHash": "c8a633a4",
+    "@vicons/material": {
+      "src": "../../../../../node_modules/.pnpm/@vicons+material@0.12.0/node_modules/@vicons/material/es/index.js",
+      "file": "@vicons_material.js",
+      "fileHash": "cfe67a18",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-KJ7V4WWK": {
-      "file": "chunk-KJ7V4WWK.js"
-    },
     "chunk-YFLFHFTV": {
       "file": "chunk-YFLFHFTV.js"
     }

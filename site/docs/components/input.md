@@ -11,9 +11,12 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 基础用法
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo1 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -34,9 +37,12 @@ const value = ref("hello world");
 
 ## 禁用状态
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -57,9 +63,12 @@ const value = ref("hello world");
 
 ## 可清空
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo3 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -83,9 +92,12 @@ const value = ref("hello world");
 
 ## 密码框
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo4 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -109,9 +121,12 @@ const value = ref("hello world");
 
 ## 文本域
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo5 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -140,9 +155,12 @@ const value = ref("hello world");
 
 ## 带 icon 的输入框
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo6 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -178,9 +196,12 @@ const value1 = ref("hello world");
 
 ## 手动 focus / select / blur
 
+<ClientOnly>
+
 <div class="example">
   <inputDemo7 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

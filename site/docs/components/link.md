@@ -2,9 +2,12 @@
 
 ## 基础用法
 
+<ClientOnly>
+
 <div class="example">
 <linkDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -24,9 +27,12 @@
 :::
 
 ## 禁用状态
+<ClientOnly>
+
 <div class="example">
 <linkDemo2 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -48,9 +54,13 @@
 :::
 
 ## 下划线
+
+<ClientOnly>
+
 <div class="example">
 <linkDemo3 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -69,9 +79,12 @@
 
 ## 图标
 
+<ClientOnly>
+
 <div class="example">
-<linkDemo4 />
+<!-- <linkDemo4 /> -->
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

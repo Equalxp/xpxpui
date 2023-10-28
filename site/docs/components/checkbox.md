@@ -2,9 +2,12 @@
 
 ## 基础使用
 
+<ClientOnly>
+
 <div class="example">
 <checkboxDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -47,9 +50,12 @@ const checkbox8 = ref(false);
 
 ## 禁用状态
 
+<ClientOnly>
+
 <div class="example">
 <checkboxDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -86,9 +92,12 @@ const disabled = ref(true);
 
 ## 多选框组
 
+<ClientOnly>
+
 <div class="example">
 <checkboxDemo3 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -112,9 +121,12 @@ const checkList = ref(["选项A"]);
 
 ## 中间状态
 
+<ClientOnly>
+
 <div class="example">
 <checkboxDemo4 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -163,9 +175,12 @@ const handleCheckedCitiesChange = (value: string[]) => {
 
 ## 带有边框
 
+<ClientOnly>
+
 <div class="example">
 <checkboxDemo5 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

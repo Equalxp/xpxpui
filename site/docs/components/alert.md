@@ -3,10 +3,11 @@
 用于页面中展示重要的提示信息
 
 ## 基础用法
-
+<ClientOnly>
 <div class="example">
 <alertDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -23,9 +24,11 @@
 
 ## 为 Alert 设置图标
 
+<ClientOnly>
 <div class="example">
 <alertDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -51,9 +54,11 @@ import { IosAirplane } from "@vicons/ionicons4";
 
 ## 使文字居中
 
+<ClientOnly>
 <div class="example">
 <alertDemo3 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -79,9 +84,11 @@ import { IosAirplane } from "@vicons/ionicons4";
 
 ## 自定义描述文案
 
+<ClientOnly>
 <div class="example">
 <alertDemo4 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -103,9 +110,11 @@ import { IosAirplane } from "@vicons/ionicons4";
 
 ## 可以关闭
 
+<ClientOnly>
 <div class="example">
 <alertDemo5 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

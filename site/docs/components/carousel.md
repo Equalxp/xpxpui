@@ -6,9 +6,12 @@
 
 图片自行更改
 
+<ClientOnly>
+
 <div class="example">
 <carouselDemo1 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码

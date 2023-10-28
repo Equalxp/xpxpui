@@ -2,9 +2,12 @@
 
 ## 基础用法
 
+<ClientOnly>
+
 <div  class="example">
 <tagDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -22,9 +25,12 @@
 
 ## 尺寸
 
+<ClientOnly>
+
 <div  class="example">
 <tagDemo2 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -42,9 +48,12 @@
 
 ## 可关闭
 
+<ClientOnly>
+
 <div  class="example">
 <tagDemo3 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -72,9 +81,12 @@ const tags = ref([
 
 ## 颜色
 
+<ClientOnly>
+
 <div  class="example">
 <tagDemo4 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -92,9 +104,12 @@ const tags = ref([
 
 ## 动态编辑标签
 
+<ClientOnly>
+
 <div  class="example">
 <tagDemo5 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码

@@ -2,10 +2,12 @@
 
 ## 基础用法
 
+<ClientOnly>
 
 <div class="example">
 <switchDemo1 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -26,9 +28,12 @@ const checked = ref(false);
 
 ## 自定义颜色
 
+<ClientOnly>
+
 <div class="example">
 <switchDemo2 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码
@@ -47,9 +52,12 @@ const checked = ref(false);
 
 ## 尺寸
 
+<ClientOnly>
+
 <div class="example">
 <switchDemo3 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码

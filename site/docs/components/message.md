@@ -4,9 +4,12 @@
 
 ## 基础使用
 
+<ClientOnly>
+
 <div class="example">
 <messageDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -41,9 +44,12 @@ const openVn = () => {
 
 ## 不同状态
 
+<ClientOnly>
+
 <div class="example">
 <messageDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -83,9 +89,12 @@ const open4 = () => {
 
 ## 可关闭的消息提示
 
+<ClientOnly>
+
 <div class="example">
 <messageDemo3 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -135,9 +144,12 @@ const open4 = () => {
 
 ## 居中
 
+<ClientOnly>
+
 <div class="example">
 <messageDemo4 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

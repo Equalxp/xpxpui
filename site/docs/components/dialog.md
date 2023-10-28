@@ -4,9 +4,12 @@
 
 ## 基础用法
 
+<ClientOnly>
+
 <div class="example">
 <dialogDemo1 />
 </div>
+</ClientOnly>
 
 
 ::: details 显示代码

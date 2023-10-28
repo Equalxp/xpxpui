@@ -1,6 +1,5 @@
 import DefaultTheme from "vitepress/theme";
-import './style/vitepress.less'
-
+// import './style/vitepress.less'
 import xpxpui from 'xpxpui'
 
 export default {

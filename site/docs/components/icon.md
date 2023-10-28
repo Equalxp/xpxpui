@@ -5,9 +5,12 @@ Xpxp-UI 推荐使用
 
 ## 基础使用
 
+<ClientOnly>
+
 <div class="example">
   <iconDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -18,9 +21,12 @@ Xpxp-UI 推荐使用
 
 ## 自定义图标
 
+<ClientOnly>
+
 <div class="example">
   <iconDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -30,10 +36,12 @@ Xpxp-UI 推荐使用
 :::
 
 ## 深度
+<ClientOnly>
 
 <div class="example">
   <iconDemo3 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

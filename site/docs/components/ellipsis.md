@@ -3,9 +3,13 @@
 复杂度不会消失，只会转移。
 
 ## 基础用法
+
+<ClientOnly>
+
 <div class="example">
 <ellipsisDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -23,9 +27,12 @@
 
 ## 最大行数
 
+<ClientOnly>
+
 <div class="example">
 <ellipsisDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -43,9 +50,12 @@
 
 ## 展开方式
 
+<ClientOnly>
+
 <div class="example">
 <ellipsisDemo3 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

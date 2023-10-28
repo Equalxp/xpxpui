@@ -2,9 +2,12 @@
 
 ## 基础用法
 
+<ClientOnly>
+
 <div class="example">
 <tabsDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -28,9 +31,12 @@ const selected = ref("半推半就");
 
 ## 卡片风格
 
+<ClientOnly>
+
 <div class="example">
 <tabsDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 

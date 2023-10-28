@@ -4,9 +4,12 @@
 
 在一组备选项中进行单选
 
+<ClientOnly>
+
 <div class="example">
 <radioDemo1 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -44,9 +47,12 @@ const radio4 = ref("1");
 
 ## 禁用状态
 
+<ClientOnly>
+
 <div class="example">
 <radioDemo2 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -67,9 +73,12 @@ const radio = ref("1");
 
 ## 尺寸
 
+<ClientOnly>
+
 <div class="example">
 <radioDemo3 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -93,9 +102,12 @@ const radio = ref("1");
 
 ## 单选框组
 
+<ClientOnly>
+
 <div class="example">
 <radioDemo4 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
@@ -119,9 +131,12 @@ const radio = ref("1");
 
 ## 边框
 
+<ClientOnly>
+
 <div class="example">
 <radioDemo5 />
 </div>
+</ClientOnly>
 
 ::: details 显示代码
 
